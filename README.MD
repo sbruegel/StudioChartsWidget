@@ -1,13 +1,13 @@
 # Studio (3d) charts widget
 
-This is a package of 2d and 3d chart widgets for Vuforia Studio. The underlying library uses [Chart.js](https://www.chartjs.org/).
-Thanks to Petrisor for the code of the 3d widget!
+This is a package of 2D and 3D chart widgets for Vuforia Studio. The underlying library uses [Chart.js](https://www.chartjs.org/).
+Thanks to Petrisor for the code of the 3D widget!
 
-## Instalation
+## Installation
 
 To use the charts follow the next steps:
 
-* Download the latest version from the [releases page](https://github.com/Unfaehig/StudioWidgets/releases).
+* Download the latest version from the [releases page](https://github.com/sbruegel/StudioWidgets/releases).
 * Unzip the package under `DOCUMENTS__FOLDER\VuforiaStudio\Extensions`. The end result should be that you have an `index.js` at the folowing path: `VuforiaStudio\Extensions\StudioChartsWidget\index.js`.
 * Restart Vuforia Studio, if it is already running.
 

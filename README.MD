@@ -7,7 +7,7 @@ Thanks to Petrisor for the code of the 3D widget!
 
 To use the charts follow the next steps:
 
-* Download the latest version from the [releases page](https://github.com/sbruegel/StudioWidgets/releases).
+* Download the latest version from the [releases page](https://github.com/sbruegel/StudioChartsWidget/releases).
 * Unzip the package under `DOCUMENTS__FOLDER\VuforiaStudio\Extensions`. The end result should be that you have an `index.js` at the folowing path: `VuforiaStudio\Extensions\StudioChartsWidget\index.js`.
 * Restart Vuforia Studio, if it is already running.
 

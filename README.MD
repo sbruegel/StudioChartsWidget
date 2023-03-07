@@ -1,20 +1,19 @@
-# Studio 3d chart widgets
+# Studio (3d) charts widget
 
-This is a package of 3d chart widgets to used in Vuforia Studio. The underlying library used here is [Chart.js](https://www.chartjs.org/).
-
-At the moment, only the timeseries widget is supported.
+This is a package of 2d and 3d chart widgets for Vuforia Studio. The underlying library uses [Chart.js](https://www.chartjs.org/).
+Thanks to Petrisor for the code of the 3d widget!
 
 ## Instalation
 
 To use the charts follow the next steps:
 
-* Download the latest version from the by simply downloading the entire repository (green _Clone and Download button_ in the upper right corner. Chose download as ZIP).
-* Unzip the package under `DOCUMENTS__FOLDER\VuforiaStudio\Extensions`. The end result should be that you have a `index.js` at the folowing path: `VuforiaStudio\Extensions\3dChart\index.js`.
-* Restart Vuforia Studio if already running.
+* Download the latest version from the [releases page](https://github.com/Unfaehig/StudioWidgets/releases).
+* Unzip the package under `DOCUMENTS__FOLDER\VuforiaStudio\Extensions`. The end result should be that you have an `index.js` at the folowing path: `VuforiaStudio\Extensions\StudioChartsWidget\index.js`.
+* Restart Vuforia Studio, if it is already running.
 
 ## Usage
 
-The widgets should be visible under the _Charts_ group in the 3D section of Studio.
+The widgets should be visible under the _Charts_ group in the 2D/3D section of Studio.
 Starting on version _8.3.5.3961_ the widgets are also visible after being added to the studio canvas. Older version are NOT supported and may lead to studio crashes.
 
 ### Timeseries (Line)
@@ -35,7 +34,7 @@ The timeseries widget allows displaying points on a line. Often, it is used to s
 | `Fills` | `STRING` | `fills` | A comma-separated list of [Filling modes](http://www.chartjs.org/docs/latest/charts/area.html#filling-modes) for each of the columns mentioned in the `Y-axis Fields` specifying how to fill the area under the line.
 | `Colors of each fill` | `STRING` | `fillColors` | A comma-separated list of [Colors](http://www.chartjs.org/docs/latest/general/colors.html#colors) for each of the columns mentioned in the `Y-axis Fields` used to control the fill.
 | `Show Lines` | `BOOLEAN` | `showLines` | A comma-separated list of true/false values for each of the columns mentioned in the `Y-axis Fields`. If false, the line is not drawn.
-| `Interpolations` | `NUMBER` | `lineTensions` | A comma-separated list of number values for each of the columns mentioned in the `Y-axis Fields` for the bezier curve tension of the line. Set to 0 to draw straightlines.
+| `Interpolations` | `NUMBER` | `lineTensions` | A comma-separated list of number values for each of the columns mentioned in the `Y-axis Fields` for the bezier curve tension of the line. Set to 0 to draw straightlines. See more [here](https://pomax.github.io/bezierinfo/#catmullconv).
 | `Title` | `STRING` | `title` | The chart title defines text to draw at the top of the chart.
 | `X Axis Label` | `STRING` | `scaleLabelX` | The label of the X axis.
 | `Y Axis Label` | `STRING` | `scaleLabelY` | The label of the Y axis.
@@ -50,11 +49,7 @@ The existing widget only exposes a small subset of the full [Chart.js](https://w
 In javascript, after the chart has been initialised, you can get a reference to it's config like this, then start modifying it. Have a look at the [configuration](http://www.chartjs.org/docs/latest/configuration/) to see what's possible.
 
 ``` javascript
-var chartScope = angular.element(document.querySelector('[widget-id="timeSeriesChart-2"]  [cjs-chart]')).isolateScope(); // get a reference to the timeSeriesChart-2 widget
+var chartScope = angular.element(document.querySelector('[widget-id="3DChart-2"]  [acjs-chart]')).isolateScope(); // get a reference to the 3DChart-2 widget
 chartScope._chartConfig.options.title.text = "The new title!"; // update the config
 chartScope._chart.update(); // trigger the update using the new config
 ```
-
-## Known issues
-
-* ...?

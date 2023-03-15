@@ -147,6 +147,7 @@
               'stacked="{{me.stacked}}" ' +
               'height="{{me.height}}" ' +
               'border="{{me.borderWidth}}" ' +
+              'delegate="delegate" ' +
               'twx-native-events>' +
               '<canvas id=' + props.widgetId + ' style="position:relative; width:{{me.width}}; height:{{me.height}};"></canvas>' +
             '</div>' +

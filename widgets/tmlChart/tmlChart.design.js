@@ -123,6 +123,7 @@ function twx3dTimeSeriesChart() {
         'background-color="{{me.backgroundColor}}" ' +
         'stacked="{{me.stacked}}" ' +
         'border="{{me.borderWidth}}" ' +
+        'delegate="delegate" ' +
         'twx-native-events>' +
         '</div>';
       var template3d = runtimeTemplate.replace("#widgetId#", props.widgetId).replace('src="{{me.src}}"', 'src="extensions/images/LoadingChart.png"');
